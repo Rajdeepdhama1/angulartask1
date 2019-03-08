@@ -1,0 +1,14 @@
+<table style="border: 1px solid black;
+border-collapse: collapse;
+padding: 5px;" >
+  <tr>
+    <th *ngFor="let col of columns" style="border: 3px solid black;">
+      {{col}}
+    </th>
+  </tr>
+  <tr *ngFor="let char of characters | async">
+    <td *ngFor="let col of columns" style="border: 2px solid black;">
+      {{char[col]}}
+    </td>
+  </tr>
+</table>
